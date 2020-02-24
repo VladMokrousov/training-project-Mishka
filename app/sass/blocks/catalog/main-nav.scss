@@ -1,0 +1,22 @@
+a .main-nav__logo-image:hover {
+    opacity: 0.6;
+}
+a .main-nav__logo-image:active {
+    opacity: 0.3;
+}
+.site-list__current-item {
+    color: #63d1bb;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+}
+@media (min-width: $tablet-width) {
+    .site-list__current-item {
+        font-size: 15px;
+    }
+}
+@media (min-width: $desktop-width) {
+    .site-list__current-item {
+        font-size: 17px;
+    }
+}

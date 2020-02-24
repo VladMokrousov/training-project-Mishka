@@ -1,0 +1,111 @@
+.modal-container {
+    width: 260px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+.modal-cart__wrapper {
+    padding-bottom: 46px;
+}
+
+
+.modal-cart {
+    border-top: 1px solid #c7c7c7;
+    border-bottom: 1px solid #c7c7c7;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 10px 0px rgba(0, 1, 1, 0.25);
+   
+}
+
+
+
+.modal-cart__title {
+    text-align: center;
+    margin: 0;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+    margin-top: 37px;
+    margin-bottom: 25px;
+}
+.modal-cart__description {
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 30px;
+    display: block;
+}
+.modal-cart__size-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.modal-cart__size-list label {
+    position: relative;
+    font-size: 17px;
+    line-height: 16px;
+    font-weight: 700;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        top: -16px;
+        left: -37px;
+        width: 82px;
+        height: 52px;
+        background-color: transparent;
+        border: 2px solid #ececec;
+        box-sizing: border-box;
+    }
+}
+
+.modal-cart__size-list label:hover {
+    &::after {
+        border: 2px solid #c7c7c7;
+    }
+}
+.modal-cart__size-list input:checked + label::after {
+    border: 2px solid #63d1bb;
+}
+
+.modal-cart__size-list li:first-of-type {
+    margin-left: 37px;
+}
+.modal-cart__size-list li:last-of-type {
+    margin-right: 36px;
+}
+.button--modal {
+    width: 100%;
+    color: #ffffff;
+    background-color: #63d1bb;
+    border: 2px solid #63d1bb;
+    &:hover,
+    &:focus{
+        color: #63d1bb;
+        background-color: #ffffff;
+    }
+    &:active{
+        color: rgba(99, 209, 187, 0.7);
+        background-color: #ffffff;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .modal-cart {
+        border: 1px solid #c7c7c7;
+        width: 568px;
+        box-sizing: border-box;
+    }
+    .modal-container {
+        width: 350px;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .modal-cart__wrapper {
+        padding-bottom: 46px;
+    }
+    
+}

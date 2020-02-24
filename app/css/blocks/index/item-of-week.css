@@ -1,0 +1,24 @@
+.item-of-week__name-of-item {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000; }
+
+.item-of-week__die {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #63d1bb; }
+
+.item-of-week__description {
+  margin: 0;
+  line-height: 24px; }
+
+.item-of-week__specifications td {
+  padding: 0;
+  line-height: 20px; }
+
+.item-of-week__price {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700; }

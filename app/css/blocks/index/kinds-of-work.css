@@ -1,0 +1,17 @@
+.kinds-of-work__slogan {
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000; }
+
+.kinds-of-work__name {
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff; }
+
+.kinds-of-work__interior div {
+  background-color: #63d1bb; }
+
+.kinds-of-work__toys div {
+  background-color: #56c3b2; }

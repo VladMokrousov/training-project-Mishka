@@ -1,0 +1,30 @@
+.modal-cart__title {
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000; }
+
+.modal-cart__description {
+  line-height: 30px; }
+
+.modal-cart__size-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.modal-cart__size-list label {
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700; }
+
+.button--modal {
+  color: #ffffff;
+  background-color: #63d1bb;
+  border: 2px solid #63d1bb; }
+  .button--modal:hover, .button--modal:focus {
+    color: #63d1bb;
+    background-color: #ffffff; }
+  .button--modal:active {
+    color: rgba(99, 209, 187, 0.7);
+    background-color: #ffffff; }

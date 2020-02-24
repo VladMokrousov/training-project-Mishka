@@ -1,0 +1,140 @@
+.features {
+    position: relative;
+    padding-top: 38px;
+    padding-bottom: 60px;
+    
+}
+.features__title {
+    display: block;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+    
+}
+
+.features__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.features__item {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #000000;
+    position: relative;
+    padding-top: 86px;
+    
+}
+.features__item-eco::before {
+    content: "";
+    position: absolute;
+    bottom: 58px;
+    left: 8px;
+    width: 32px;
+    height: 37px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url(../svg/flower.svg);
+}
+.features__item-scandinavian::before {
+    content: "";
+    position: absolute;
+    bottom: 58px;
+    left: 0;
+    width: 47px;
+    height: 27px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url(../svg/cash.svg); 
+}
+.features__item-likes::before {
+    content: "";
+    position: absolute;
+    bottom: 52px;
+    left: 8px;
+    width: 34px;
+    height: 27px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url(../svg/heart.svg);  
+}
+.features__item-hand-made::before {
+    content: "";
+    position: absolute;
+    bottom: 56px;
+    left: 4px;
+    width: 35px;
+    height: 34px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url(../svg/ball.svg);  
+}
+.features__item-russian-brand::before {
+    content: "";
+    position: absolute;
+    bottom: 54px;
+    left: -7px;
+    width: 55px;
+    height: 23px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url(../svg/rocket.svg);  
+}
+.features__item-gift-packege::before {
+    content: "";
+    position: absolute;
+    bottom: 56px;
+    left: 3px;
+    width: 33px;
+    height: 32px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url(../svg/gift.svg);  
+}
+
+@media (min-width: $tablet-width) {
+    .features {
+        padding-top: 54px;
+        padding-bottom: 80px;
+        
+    }
+    .features__title {
+        font-size: 43px;
+        line-height: 50px;
+    }
+    .features__list-wrapper {
+        display: flex;
+    }
+    .features__list:first-of-type {
+        margin-right: 98px;
+
+    }
+    .features__item {
+        font-size: 20px;
+        line-height: 22px;
+        padding-top: 116px;
+    }
+}
+@media (min-width: $desktop-width) {
+    .features {
+        padding-top: 68px;
+        padding-bottom: 90px;
+        
+    }
+    .features__title {
+        font-size: 53px;
+        line-height: 57px;
+    }
+    .features__wrapper {
+        position: relative;
+        padding-left: 175px;
+        box-sizing: border-box;
+        
+    }
+    .features__list:first-of-type {
+        margin-right: 114px;
+
+    }
+}

@@ -1,0 +1,200 @@
+.reviews {
+    position: relative;
+    margin-bottom: 44px;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        width: 100vw;
+        height: 6px;
+        background-image: url("../svg/zigzag-grey.svg");
+        background-repeat: repeat-x;
+        background-position: center 0;
+        z-index: 5;
+        
+
+    }
+}
+.reviews__title {
+    margin: 0;
+    margin-bottom: 35px;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+
+}
+.reviews__list {
+    margin-bottom: 38px;
+}
+.reviews__item,
+.reviews__text {
+    margin: 0;
+}
+.reviews__text {
+    line-height: 30px;
+    margin-bottom: 25px;
+}
+.reviews__autor-name {
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #000000;
+    font-style: normal;
+}
+.reviews__autor-email{
+    font-size: 17px;
+    line-height: 24px;
+}
+.reviews__button-wrapper {
+    margin-top: 30px;
+    display: flex;
+}
+.reviews__prev,
+.reviews__next {
+    position: relative;
+    width: 130px;
+    height: 52px;
+    background-color: transparent;
+    border: 1px solid #ececec; 
+    cursor: pointer;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 12px;
+        left: 38px;
+        width: 50px;
+        height: 26px;
+      
+        background-image: url(../svg/arrow-left.svg);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+    }
+    &:hover::before {
+        opacity: 0.6;
+    }
+    &:active::before {
+        opacity: 0.3;
+    }
+}
+.reviews__next::before {
+    transform: rotate(180deg);
+}
+.reviews__prev {
+    border-right: none;
+}
+.reviews__write-review {
+    width: 100%;
+}
+@media (min-width: $tablet-width) {
+    .reviews {
+        padding-top: 80px;
+        padding-bottom: 50px;
+        margin-bottom: 66px;
+        &::before {
+            bottom: -81px;
+            height: 15px;
+        }
+        
+    }
+    .reviews__title {
+        font-size: 43px;
+        line-height: 50px;
+        margin-bottom: 64px;
+    }
+    
+    .reviews__wrapper {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -80px;
+            left: -50px;
+            width: 350px;
+            height: 457px;
+      
+            background-image: url(../img/bg-review.jpg);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+        
+        
+        
+    }
+    
+    .reviews__text {
+        font-size: 17px;
+        margin-bottom: 64px;
+    }
+    .reviews__autor-email {
+        display: block;
+    }
+    .reviews__button-wrapper {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    .reviews__prev,
+    .reviews__next {
+        border: none;
+        width: 80px;
+        &::before {
+            left: 12px;  
+        }
+    }
+    .reviews__write-review {
+        width: auto;
+        padding: 12px 40px;
+        position: absolute;
+        top: 5px;
+        right: 0;
+    }
+}
+@media (min-width: $desktop-width) {
+    .reviews::before {
+        width: 0;
+        height: 0;
+    }
+    .reviews__wrapper {
+        padding-left: 175px;
+        box-sizing: border-box;
+        &::before {
+            top: -75px;
+            left: 0;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -177px;
+            background-image: url("../svg/zigzag-grey.svg");
+            z-index: 5;
+            width: 1050px;
+            
+            height: 23px;
+            background-repeat: no-repeat;
+            background-position: center 0;
+        }
+    }
+    .reviews__title {
+        font-size: 53px;
+        line-height: 57px;
+        
+    }
+    .reviews__text {
+        width: 760px;
+        margin-bottom: 50px;
+    }
+    .reviews__prev,
+    .reviews__next {
+        width: 88px;
+        &::before {
+            left: 20px;  
+        }
+    }
+    .reviews__write-review {
+        top: 15px;
+    }
+}

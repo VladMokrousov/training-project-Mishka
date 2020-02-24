@@ -1,0 +1,338 @@
+.main-nav__logo {
+    margin-left: 86px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block; 
+    width: 86px;
+    height: 35px;
+}
+
+.main-nav {
+    position: relative;
+    
+    
+}
+.main-nav__toggle {
+    position: absolute;
+    top: 7px;
+    right: 0;
+    width: 21px;
+    height: 21px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    
+}
+.main-nav--closed .main-nav__toggle::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background-color: #221f1f;
+    box-shadow: 0 6px 0 0 #221f1f, 0 12px 0 0 #221f1f;
+}
+.main-nav--closed .main-nav__toggle:active::before {
+    background-color: rgba(34, 31, 31, 0.3);
+    box-shadow: 0 6px 0 0 rgba(34, 31, 31, 0.3), 
+    0 12px 0 0 rgba(34, 31, 31, 0.3);
+}
+.main-nav--opened .main-nav__toggle {
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -3px;
+        width: 27px;
+        height: 2px;
+        background-color: #221f1f;
+    }
+    &::after {
+        transform: rotate(45deg);
+      
+    }
+    &::before {
+        transform: rotate(-45deg);
+    }
+    
+    &:active::before,
+    &:active::after {
+        background-color: rgba(34, 31, 31, 0.3);
+    }
+}
+
+.site-list__item,
+.user-list__item {
+  
+    position: relative;
+    padding-left: 46px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 1px;
+        background-color: #ececec;
+        
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 1px;
+        background-color: #ececec;
+        
+    }
+}
+
+.site-list,
+.user-list,
+.additional-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ 
+}
+.site-list a,
+.user-list a {
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+    &:hover {
+        opacity: 0.6;
+    }
+    &:active {
+        opacity: 0.3;
+    }
+    
+}
+.user-list a.user-list__search {
+    position: relative;
+    display: block;
+    &:hover {
+        opacity: 1;
+    }
+    &:active {
+        opacity: 1;
+    }
+    &:hover > span {
+        opacity: 0.6;
+    }
+    &:active > span {
+        opacity: 0.3;
+    }
+    &:hover > svg {
+        opacity: 1;
+        path {
+            fill: #63d1bb;
+
+        }
+    }
+    &:active > svg {
+        opacity: 0.3;
+        path {
+            fill: #63d1bb;
+
+        }
+    }
+}
+
+.user-list__search svg {
+    position: absolute;
+    top: 2px;
+    left: -46px;
+    width: 18px;
+    height: 18px;
+    opacity: 0.2;
+}
+
+.user-list a.user-list__cart {
+    position: relative;
+    display: block;
+    &:hover {
+        opacity: 1;
+    }
+    &:active {
+        opacity: 1;
+    }
+    &:hover > span {
+        opacity: 0.6;
+    }
+    &:active > span {
+        opacity: 0.3;
+    }
+    &:hover > svg {
+        opacity: 1;
+        path {
+            fill: #63d1bb;
+
+        }
+    }
+    &:active > svg {
+        opacity: 0.3;
+        path {
+            fill: #63d1bb;
+
+        }
+    }
+}
+
+.user-list__cart svg {
+    position: absolute;
+    top: 0;
+    left: -46px;
+    width: 21px;
+    height: 18px;
+    opacity: 0.2;
+}
+
+
+.additional-list {
+    display: none;
+}
+@media (max-width: $mobile-width-only) {
+    .main-nav--closed .site-list {
+        display: none;
+    }
+    .main-nav--closed .user-list {
+        display: none;
+    }
+    .main-nav--nojs .main-nav__toggle {
+        display: none;
+    }
+    .main-nav--nojs .site-list {
+        display: block;
+    }
+    .main-nav--nojs .user-list {
+        display: block;
+        
+    }
+}
+@media (min-width: $tablet-width) {
+    .main-nav__toggle {
+        display: none;
+    }
+    .user-list__search-text {
+        display: none;
+    }
+    
+    .main-nav {
+        display: flex;
+        justify-content: space-between;
+        min-height: 88px;
+        flex-wrap: wrap;
+    }
+    .main-nav__logo {
+        width: 112px;
+        height: 46px;
+        
+        margin-left: 0;
+        margin-top: 22px;
+        
+       
+    }
+    .main-nav__logo-image {
+        width: 112px;
+        height: 46px;
+    }
+    .site-list__item,
+    .user-list__item {
+        
+        padding: 0;
+        &::before {
+            display: none;
+        }
+        &::after {
+            display: none;
+        }
+    }
+    .site-list {
+        display: flex;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        z-index: 1;
+    }
+    .site-list a {
+        font-size: 15px;
+    }
+    .user-list {
+        display: flex;
+         
+    }
+    .user-list__item {
+        padding: 32px 0;
+    }
+    .user-list__item:first-of-type {
+        padding-left: 82px;
+        border-left: 1px solid #ececec;
+    }
+    .user-list__item:last-of-type {
+        padding-left: 86px;
+        border-left: 1px solid #ececec;
+    }
+    .site-list__item:first-of-type {
+        margin-right: 36px;
+    }
+  
+}
+@media (min-width: $desktop-width) {
+    .main-nav__logo,
+    .main-nav__logo-image {
+        width: 149px;
+        height: 72px; 
+    }
+    .main-nav__logo {
+        margin: 9px 0;
+        order: 2;
+    }
+
+    .additional-list {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        z-index: 1;
+    }
+    .additional-list a {
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: 700;
+        &:hover {
+            opacity: 0.6;
+        }
+        &:active {
+            opacity: 0.3;
+        }
+    }
+    .additional-list__item:first-of-type {
+        margin-right: 60px;
+    }
+    .site-list {
+        position: static;
+        order: 1;
+        
+    }
+    .site-list__item {
+        padding: 32px 0;
+    }
+    .site-list__item:first-of-type {
+        padding-right: 36px;
+        border-right: 1px solid #ececec;
+    }
+    .site-list a {
+        font-size: 17px;
+    }
+    .user-list {
+        order: 3;
+        
+    }
+
+}

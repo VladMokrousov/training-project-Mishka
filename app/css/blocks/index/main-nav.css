@@ -1,0 +1,14 @@
+.site-list,
+.user-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.site-list a,
+.user-list a {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700; }
+
+.additional-list {
+  display: none; }

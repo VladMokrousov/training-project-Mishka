@@ -1,0 +1,9 @@
+a.page-footer__logo:hover > svg,
+a.page-footer__logo:focus > svg {
+    path {
+        fill: #46c1ae;
+    }
+}
+a.page-footer__logo:active > svg {
+    opacity: 0.3;
+}

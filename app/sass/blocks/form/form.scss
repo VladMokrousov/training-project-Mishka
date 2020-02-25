@@ -88,6 +88,7 @@
     &:hover::before {
         border: 3px solid #62d1ba;
     }
+   
     &:active::before {
         border: 3px solid #c7c7c7;
     }
@@ -149,7 +150,9 @@
     left: -53px;
     width: 22px;
     height: 16px;
-    background-color: black;
+    background-image: url(../svg/checkmark-small.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
     
 }
 .form__user-name,
@@ -171,23 +174,33 @@
 .form__email {
     margin-bottom: 30px;
 }
-.form__tel legend::before {
-    content: "";
-    position: absolute;
-    top: 40px;
-    left: 227px;
-    width: 25px;
-    height: 24px;
-    background-color: black;
+.form__user-tel:hover + svg,
+.form__user-tel:focus + svg {
+    g {
+        fill: #62d1ba;
+    }
+
 }
-.form__email legend::before {
-    content: "";
+.form__tel-input-wrapper,
+.form__email-input-wrapper {
+    position: relative;
+}
+.form__tel-input-wrapper svg {
     position: absolute;
-    top: 40px;
-    left: 224px;
-    width: 32px;
-    height: 21px;
-    background-color: black;
+    top: -3px;
+    right: 7px;
+}
+.form__email-input-wrapper svg {
+    position: absolute;
+    top: 0;
+    right: 4px;
+}
+.form__user-email:hover + svg,
+.form__user-email:focus + svg {
+    path {
+        fill: #62d1ba;
+    }
+
 }
 
 
@@ -274,11 +287,25 @@
 }
 @media (min-width: $tablet-width) {
     .form {
+        position: relative;
         padding-bottom: 50px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -22px;
+            left: 0;
+            width: 100vw;
+            height: 22px;
+            background-image: url(../svg/zigzag.svg);
+            background-position: center 0;
+            background-repeat: repeat-x;
+            z-index: 5;
+            background-size: 750px;
+        }
     }
     
     .form__wrapper {
-        padding-top: 80px;
+        padding-top: 60px;
     }
     .form__description {
         
@@ -381,6 +408,7 @@
         height: 22px;
         left: -70px;
         top: 5px;
+        background-image: url(../svg/checkmark-big.svg);
     }
     .form__color-item:nth-of-type(odd) {
         width: 264px;
@@ -465,11 +493,12 @@
     .form__tel legend {
         margin-right: 134px;
        
-
-        &::before {
-            top: 0;
-            left: 619px;
-        }
+    }
+    .form__tel-input-wrapper {
+        width: 100%;
+    }
+    .form__tel-input-wrapper svg {
+        right: 25px;
     }
     .form__user-tel {
         padding-right: 58px;
@@ -502,11 +531,15 @@
         }
     }
     .form__email legend {
-        margin-right: 108px;
-        &::before {
-            top: 0;
-            left: 613px;
-        }
+        margin-right: 100px;
+       
+    }
+    .form__email-input-wrapper {
+        width: 100%;
+    }
+    .form__email-input-wrapper svg {
+        
+        right: 22px;
     }
     .form__email input {
         background-color: transparent;
@@ -554,6 +587,14 @@
     }
 }
 @media (min-width: $desktop-width) {
+    .form::before {
+        top: -32px;
+        height: 34px;
+        background-size: auto;
+    }
+    .form__wrapper {
+        padding-top: 100px;
+    }
     .form__color-item:nth-of-type(3) {
         margin-right: 250px;
     }
@@ -598,18 +639,25 @@
     .form__tel-content-wrapper {
         padding-right: 175px;
     }
+    .form__tel-input-wrapper svg {
+        right: 8px;
+    }
     .form__user-tel {
         padding-right: 40px;
     }
     .form__email legend {
         margin-left: 62px;
-        margin-right: 56px;
+        margin-right: 50px;
         &::before {
             left: 778px;
         }
     }
     .form__email-content-wrapper {
         padding-right: 175px;
+    }
+    .form__email-input-wrapper svg {
+        
+        right: 4px;
     }
     .form__user-email {
         padding-right: 40px;

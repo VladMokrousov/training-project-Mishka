@@ -13,6 +13,14 @@
     justify-content: space-between;
     
 }
+.social__link:hover > svg {
+    path {
+        fill: #46c1ae;
+    }
+}
+.social__link:active > svg {
+    opacity: 0.3;
+}
 .social__item:nth-last-of-type(2) {
     margin-top: -5px;
 }

@@ -1077,10 +1077,16 @@ input[type="radio"].visually-hidden {
 @media (min-width: 768px) {
   .page-footer__logo-wrapper {
     display: block;
-    padding: 54px 0; }
+    padding: 54px 0;
+    margin-right: auto; }
   .page-footer__wrapper {
-    display: flex;
-    justify-content: space-between; } }
+    display: flex; }
+  .page-footer__social {
+    margin-right: 84px; } }
+
+@media (min-width: 1150px) {
+  .page-footer__social {
+    margin-right: 275px; } }
 
 .social {
   border-bottom: 1px solid #e5e5e5; }
@@ -1095,6 +1101,12 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
   justify-content: space-between; }
 
+.social__link:hover > svg path {
+  fill: #46c1ae; }
+
+.social__link:active > svg {
+  opacity: 0.3; }
+
 .social__item:nth-last-of-type(2) {
   margin-top: -5px; }
 
@@ -1108,9 +1120,16 @@ input[type="radio"].visually-hidden {
   padding-top: 30px;
   padding-bottom: 35px;
   width: 182px;
+  margin: 0 auto; }
+
+.copyright__link {
   display: flex;
-  margin: 0 auto;
   justify-content: space-between; }
+  .copyright__link:hover > svg g {
+    fill: #46c1ae;
+    stroke: #46c1ae; }
+  .copyright__link:active {
+    opacity: 0.3; }
 
 .copyright__text {
   font-size: 19px;
@@ -1118,7 +1137,7 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   color: #000000; }
 
-.copyright__link {
+.copyright__link-logo {
   margin-top: -5px; }
 
 @media (min-width: 768px) {
@@ -1662,7 +1681,9 @@ a .main-nav__logo-image:active {
   left: -53px;
   width: 22px;
   height: 16px;
-  background-color: black; }
+  background-image: url(../svg/checkmark-small.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat; }
 
 .form__user-name,
 .form__user-surname,
@@ -1689,23 +1710,27 @@ a .main-nav__logo-image:active {
 .form__email {
   margin-bottom: 30px; }
 
-.form__tel legend::before {
-  content: "";
-  position: absolute;
-  top: 40px;
-  left: 227px;
-  width: 25px;
-  height: 24px;
-  background-color: black; }
+.form__user-tel:hover + svg g,
+.form__user-tel:focus + svg g {
+  fill: #62d1ba; }
 
-.form__email legend::before {
-  content: "";
+.form__tel-input-wrapper,
+.form__email-input-wrapper {
+  position: relative; }
+
+.form__tel-input-wrapper svg {
   position: absolute;
-  top: 40px;
-  left: 224px;
-  width: 32px;
-  height: 21px;
-  background-color: black; }
+  top: -3px;
+  right: 7px; }
+
+.form__email-input-wrapper svg {
+  position: absolute;
+  top: 0;
+  right: 4px; }
+
+.form__user-email:hover + svg path,
+.form__user-email:focus + svg path {
+  fill: #62d1ba; }
 
 .form__user-name,
 .form__user-surname,
@@ -1786,9 +1811,22 @@ a .main-nav__logo-image:active {
 
 @media (min-width: 768px) {
   .form {
+    position: relative;
     padding-bottom: 50px; }
+    .form::before {
+      content: "";
+      position: absolute;
+      top: -22px;
+      left: 0;
+      width: 100vw;
+      height: 22px;
+      background-image: url(../svg/zigzag.svg);
+      background-position: center 0;
+      background-repeat: repeat-x;
+      z-index: 5;
+      background-size: 750px; }
   .form__wrapper {
-    padding-top: 80px; }
+    padding-top: 60px; }
   .form__description {
     font-size: 17px;
     margin-bottom: 78px; }
@@ -1863,7 +1901,8 @@ a .main-nav__logo-image:active {
     width: 33px;
     height: 22px;
     left: -70px;
-    top: 5px; }
+    top: 5px;
+    background-image: url(../svg/checkmark-big.svg); }
   .form__color-item:nth-of-type(odd) {
     width: 264px; }
   .form__full-name {
@@ -1930,9 +1969,10 @@ a .main-nav__logo-image:active {
       background-color: #f1f1f1; }
   .form__tel legend {
     margin-right: 134px; }
-    .form__tel legend::before {
-      top: 0;
-      left: 619px; }
+  .form__tel-input-wrapper {
+    width: 100%; }
+  .form__tel-input-wrapper svg {
+    right: 25px; }
   .form__user-tel {
     padding-right: 58px;
     background-color: transparent; }
@@ -1960,10 +2000,11 @@ a .main-nav__logo-image:active {
       height: 100%;
       background-color: #f1f1f1; }
   .form__email legend {
-    margin-right: 108px; }
-    .form__email legend::before {
-      top: 0;
-      left: 613px; }
+    margin-right: 100px; }
+  .form__email-input-wrapper {
+    width: 100%; }
+  .form__email-input-wrapper svg {
+    right: 22px; }
   .form__email input {
     background-color: transparent;
     padding-right: 60px; }
@@ -2000,6 +2041,12 @@ a .main-nav__logo-image:active {
     order: 1; } }
 
 @media (min-width: 1150px) {
+  .form::before {
+    top: -32px;
+    height: 34px;
+    background-size: auto; }
+  .form__wrapper {
+    padding-top: 100px; }
   .form__color-item:nth-of-type(3) {
     margin-right: 250px; }
   .form__description {
@@ -2030,15 +2077,19 @@ a .main-nav__logo-image:active {
       left: 779px; }
   .form__tel-content-wrapper {
     padding-right: 175px; }
+  .form__tel-input-wrapper svg {
+    right: 8px; }
   .form__user-tel {
     padding-right: 40px; }
   .form__email legend {
     margin-left: 62px;
-    margin-right: 56px; }
+    margin-right: 50px; }
     .form__email legend::before {
       left: 778px; }
   .form__email-content-wrapper {
     padding-right: 175px; }
+  .form__email-input-wrapper svg {
+    right: 4px; }
   .form__user-email {
     padding-right: 40px; }
   .form__additional legend {
@@ -2048,3 +2099,10 @@ a .main-nav__logo-image:active {
     padding-right: 175px; }
   .form__bottom-wrapper {
     padding: 0 175px; } }
+
+a.page-footer__logo:hover > svg path,
+a.page-footer__logo:focus > svg path {
+  fill: #46c1ae; }
+
+a.page-footer__logo:active > svg {
+  opacity: 0.3; }

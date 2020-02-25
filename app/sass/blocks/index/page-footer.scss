@@ -8,10 +8,19 @@
     .page-footer__logo-wrapper {
         display: block;
         padding: 54px 0;
-        
+        margin-right: auto;
     }
     .page-footer__wrapper {
         display: flex;
-        justify-content: space-between;
+        
+    }
+   
+    .page-footer__social {
+        margin-right: 84px;
+    }
+}
+@media (min-width: $desktop-width) {
+    .page-footer__social {
+        margin-right: 275px;
     }
 }

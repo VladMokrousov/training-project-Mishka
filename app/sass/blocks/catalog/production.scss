@@ -41,6 +41,11 @@
     padding-bottom: 30px;
     font-size: 13px;
     line-height: 24px;
+    
+}
+.production__video-wrapper {
+    display: block;
+    height: 150px;
 }
 .production__button {
     width: 192px;
@@ -57,11 +62,14 @@
         flex-direction: column;
         border: none;
     }
+    .production__video-wrapper {
+        height: 455px;
+    }
     .production__video {
         order: 1;
         width: 668px;
         height: 455px;
-       
+        
     }
     .production__title {
         order: 2;
@@ -104,6 +112,7 @@
         flex-direction: row;
         position: relative;
     }
+    
     .production__video {
         width: 682px;
     }

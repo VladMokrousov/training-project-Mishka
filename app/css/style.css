@@ -1306,6 +1306,10 @@ a .main-nav__logo-image:active {
   .catalog__item:active > .catalog__wrapper-text {
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1); }
 
+.catalog__item-image-wrapper {
+  height: 195px;
+  display: block; }
+
 .catalog__wrapper-text {
   margin-top: -3px;
   padding: 28px 28px;
@@ -1341,9 +1345,31 @@ a .main-nav__logo-image:active {
 
 .catalog__item-price {
   line-height: 24px;
-  font-weight: 700; }
+  font-weight: 700;
+  color: #000000; }
+
+.catalog__item-cart:hover > svg path,
+.catalog__item-cart:focus > svg path {
+  fill: #63d1bb; }
+
+.catalog__item-cart:active > svg {
+  opacity: 0.3; }
 
 @media (min-width: 768px) {
+  .catalog {
+    position: relative; }
+    .catalog::after {
+      content: "";
+      position: absolute;
+      top: 218px;
+      left: 0;
+      width: 100vw;
+      height: 22px;
+      background-image: url(../svg/zigzag.svg);
+      background-position: center 0;
+      background-repeat: repeat-x;
+      z-index: 5;
+      background-size: 750px; }
   .catalog__title {
     z-index: -1;
     font-size: 43px;
@@ -1358,6 +1384,8 @@ a .main-nav__logo-image:active {
     margin-bottom: 54px; }
   .catalog__item-title {
     font-size: 20px; }
+  .catalog__item-image-wrapper {
+    height: 334px; }
   .catalog__item-image {
     width: 334px;
     height: 334px; }
@@ -1373,6 +1401,10 @@ a .main-nav__logo-image:active {
 @media (min-width: 1150px) {
   .catalog {
     margin-bottom: 57px; }
+    .catalog::after {
+      top: 240px;
+      height: 34px;
+      background-size: auto; }
   .catalog__title {
     font-size: 53px;
     line-height: 57px;
@@ -1382,6 +1414,8 @@ a .main-nav__logo-image:active {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; }
+  .catalog__item-image-wrapper {
+    height: 462px; }
   .catalog__item-image {
     width: 316px;
     height: 462px; }
@@ -1431,6 +1465,10 @@ a .main-nav__logo-image:active {
   font-size: 13px;
   line-height: 24px; }
 
+.production__video-wrapper {
+  display: block;
+  height: 150px; }
+
 .production__button {
   width: 192px;
   margin-left: 35px;
@@ -1444,6 +1482,8 @@ a .main-nav__logo-image:active {
     display: flex;
     flex-direction: column;
     border: none; }
+  .production__video-wrapper {
+    height: 455px; }
   .production__video {
     order: 1;
     width: 668px;
@@ -1673,6 +1713,9 @@ a .main-nav__logo-image:active {
     border: 2px solid #62d1ba; }
   .form__color-item label:active::before {
     border: 2px solid #c7c7c7; }
+
+.form__checkbox:focus + label::before {
+  border: 2px solid #62d1ba; }
 
 .form__checkbox:checked + label::after {
   content: "";

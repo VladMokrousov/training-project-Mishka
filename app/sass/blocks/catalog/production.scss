@@ -2,17 +2,12 @@
     margin-bottom: 58px;
 }
 
-.production__wrapper-border {
-    border: 1px solid #ececec;
-    &:hover > .production__wrapper-text {
-        box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.1);
-    }
-    &:active > .production__wrapper-text {
-        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
-    }
+.production__wrapper:hover > .production__wrapper-text {
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.1);
 }
-
-
+.production__wrapper:active > .production__wrapper-text {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+}
 .production__title {
     position: relative;
     margin: 0;
@@ -23,15 +18,23 @@
     line-height: 24px;
     font-weight: 700;
     color: #000000;
+    border: 1px solid #ececec;
+    border-bottom: none;
     &::before {
         content: "";
         position: absolute;
-        top: 36px;
+        top: 38px;
         left: 34px;
         width: 32px;
         height: 22px;
-        background-color: black; 
+        background-image: url(../svg/video-icon.svg);
+        background-position: 0 0;
+        background-repeat: no-repeat;
     }
+}
+.production__wrapper-text {
+    border: 1px solid #ececec;
+    border-top: none; 
 }
 .production__description {
     width: 180px;
@@ -43,9 +46,28 @@
     line-height: 24px;
     
 }
+.production__video-container {
+    position: relative;
+}
+.production__video-container > svg {
+    position: absolute;
+    top: 37px;
+    left: 79px;
+    width: 101px;
+    height: 77px; 
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.2);
+    }
+    &:active {
+        transform: scale(0.8);
+        opacity: 0.3;
+    }
+}
 .production__video-wrapper {
     display: block;
     height: 150px;
+    
 }
 .production__button {
     width: 192px;
@@ -57,13 +79,18 @@
     .production {
         margin-bottom: 63px;
     }
-    .production__wrapper-border {
+    
+    .production__wrapper {
         display: flex;
         flex-direction: column;
-        border: none;
+    }
+    .production__video-container > svg {
+        top: 189px;
+        left: 283px;
     }
     .production__video-wrapper {
         height: 455px;
+       
     }
     .production__video {
         order: 1;
@@ -108,9 +135,13 @@
     .production {
         margin-bottom: 105px;
     }
-    .production__wrapper-border {
+   
+    .production__wrapper {
         flex-direction: row;
         position: relative;
+    }
+    .production__video-container > svg {
+        left: 291px;
     }
     
     .production__video {
@@ -122,6 +153,7 @@
         position: absolute;
         top: 100px;
         left: 760px;
+        width: 150px;
         &::before {
             top: -54px;
             left: 0;
@@ -135,5 +167,6 @@
     }
     .production__description {
         padding-bottom: 52px;
+        width: 230px;
     }
 }

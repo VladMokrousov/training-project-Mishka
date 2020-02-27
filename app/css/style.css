@@ -1152,7 +1152,7 @@ input[type="radio"].visually-hidden {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.9);
-  z-index: 3; }
+  z-index: 10; }
 
 .modal-container {
   width: 260px;
@@ -1163,6 +1163,11 @@ input[type="radio"].visually-hidden {
   padding-bottom: 46px; }
 
 .modal-cart {
+  position: fixed;
+  z-index: 11;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   border-top: 1px solid #c7c7c7;
   border-bottom: 1px solid #c7c7c7;
   background-color: #ffffff;
@@ -1311,7 +1316,6 @@ a .main-nav__logo-image:active {
   display: block; }
 
 .catalog__wrapper-text {
-  margin-top: -3px;
   padding: 28px 28px;
   border: 1px solid #ededed;
   display: flex;
@@ -1319,6 +1323,9 @@ a .main-nav__logo-image:active {
   justify-content: space-between;
   min-height: 178px;
   box-sizing: border-box; }
+
+.catalog__item-text-wrapper {
+  margin-bottom: 20px; }
 
 .catalog__item-title {
   margin: 0;
@@ -1390,9 +1397,10 @@ a .main-nav__logo-image:active {
     width: 334px;
     height: 334px; }
   .catalog__wrapper-text {
-    margin-top: 0;
     border: none;
     width: 100%; }
+  .catalog__item-text-wrapper {
+    margin-bottom: 0; }
   .catalog__item-description {
     font-size: 15px; }
   .catalog__item-price {
@@ -1430,12 +1438,11 @@ a .main-nav__logo-image:active {
 .production {
   margin-bottom: 58px; }
 
-.production__wrapper-border {
-  border: 1px solid #ececec; }
-  .production__wrapper-border:hover > .production__wrapper-text {
-    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.1); }
-  .production__wrapper-border:active > .production__wrapper-text {
-    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1); }
+.production__wrapper:hover > .production__wrapper-text {
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.1); }
+
+.production__wrapper:active > .production__wrapper-text {
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1); }
 
 .production__title {
   position: relative;
@@ -1446,15 +1453,23 @@ a .main-nav__logo-image:active {
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
-  color: #000000; }
+  color: #000000;
+  border: 1px solid #ececec;
+  border-bottom: none; }
   .production__title::before {
     content: "";
     position: absolute;
-    top: 36px;
+    top: 38px;
     left: 34px;
     width: 32px;
     height: 22px;
-    background-color: black; }
+    background-image: url(../svg/video-icon.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat; }
+
+.production__wrapper-text {
+  border: 1px solid #ececec;
+  border-top: none; }
 
 .production__description {
   width: 180px;
@@ -1464,6 +1479,22 @@ a .main-nav__logo-image:active {
   padding-bottom: 30px;
   font-size: 13px;
   line-height: 24px; }
+
+.production__video-container {
+  position: relative; }
+
+.production__video-container > svg {
+  position: absolute;
+  top: 37px;
+  left: 79px;
+  width: 101px;
+  height: 77px;
+  cursor: pointer; }
+  .production__video-container > svg:hover {
+    transform: scale(1.2); }
+  .production__video-container > svg:active {
+    transform: scale(0.8);
+    opacity: 0.3; }
 
 .production__video-wrapper {
   display: block;
@@ -1478,10 +1509,12 @@ a .main-nav__logo-image:active {
 @media (min-width: 768px) {
   .production {
     margin-bottom: 63px; }
-  .production__wrapper-border {
+  .production__wrapper {
     display: flex;
-    flex-direction: column;
-    border: none; }
+    flex-direction: column; }
+  .production__video-container > svg {
+    top: 189px;
+    left: 283px; }
   .production__video-wrapper {
     height: 455px; }
   .production__video {
@@ -1518,9 +1551,11 @@ a .main-nav__logo-image:active {
 @media (min-width: 1150px) {
   .production {
     margin-bottom: 105px; }
-  .production__wrapper-border {
+  .production__wrapper {
     flex-direction: row;
     position: relative; }
+  .production__video-container > svg {
+    left: 291px; }
   .production__video {
     width: 682px; }
   .production__title {
@@ -1528,7 +1563,8 @@ a .main-nav__logo-image:active {
     border: none;
     position: absolute;
     top: 100px;
-    left: 760px; }
+    left: 760px;
+    width: 150px; }
     .production__title::before {
       top: -54px;
       left: 0; }
@@ -1538,7 +1574,8 @@ a .main-nav__logo-image:active {
     padding-top: 186px;
     border-top: 1px solid #ececec; }
   .production__description {
-    padding-bottom: 52px; } }
+    padding-bottom: 52px;
+    width: 230px; } }
 
 .page-main__title {
   position: relative;

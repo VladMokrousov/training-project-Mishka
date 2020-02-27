@@ -51,7 +51,7 @@
     display: block;
 }
 .catalog__wrapper-text {
-    margin-top: -3px;
+   
     padding: 28px 28px;
     
     border: 1px solid #ededed;
@@ -60,6 +60,9 @@
     justify-content: space-between;
     min-height: 178px;
     box-sizing: border-box;
+}
+.catalog__item-text-wrapper {
+    margin-bottom: 20px;
 }
 .catalog__item-title {
     margin: 0;
@@ -150,9 +153,12 @@
         height: 334px;
     }
     .catalog__wrapper-text {
-        margin-top: 0;
+        
         border: none;
         width: 100%;
+    }
+    .catalog__item-text-wrapper {
+        margin-bottom: 0;
     }
     .catalog__item-description {
         font-size: 15px;

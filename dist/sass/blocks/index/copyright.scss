@@ -1,0 +1,38 @@
+.copyright {
+    padding-top: 30px;
+    padding-bottom: 35px;
+    width: 182px;
+    margin: 0 auto;
+   
+}
+.copyright__link {
+    display: flex;
+    justify-content: space-between;
+    &:hover > svg {
+        g {
+            fill: #46c1ae;
+            stroke: #46c1ae;
+        }
+
+    }
+    &:active {
+        opacity: 0.3;
+    }
+}
+.copyright__text {
+    font-size: 19px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #000000;
+    
+}
+.copyright__link-logo {
+    margin-top: -5px;
+    
+}
+@media (min-width: $tablet-width) {
+    .copyright {
+        margin: 0;
+        padding: 62px 0;
+    }
+}

@@ -1,0 +1,189 @@
+.kinds-of-work {
+    padding-top: 75px;
+    background-color: #f9f9f9;
+    background-image: url("../img/bg-kind-of-works-mob.jpg");
+    background-repeat: no-repeat;
+    background-position: center -15px;
+}
+.kinds-of-work__slogan {
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-bottom: 125px;
+    font-size: 27px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+    
+}
+.kinds-of-work__link-container {
+    width: 320px;
+    margin: 0 auto;
+}
+.kinds-of-work__interior-name,
+.kinds-of-work__toys-name {
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    display: block;
+    position: relative;
+}
+.kinds-of-work__interior-name::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 62px;
+    background-image: url("../svg/lamp.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.5;
+}
+.kinds-of-work__toys-name::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url("../svg/lego.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.5;
+}
+
+.kinds-of-work__interior {
+    
+    background-color: #63d1bb;
+    height: 48px;
+    padding: 28px 30px;
+    display: block;
+    &:hover,
+    &:focus {
+        
+        position: relative;
+        top: -5px;
+        
+        background-color: #59d5bc;
+        box-shadow: 0 5px 0 0 #59d5bc;
+        outline: none;
+    }
+    
+    &:hover > b::after,
+    &:focus > b::after {
+        opacity: 0.7;
+        
+    }
+    
+    &:active > b {
+        color: rgba(255, 255, 255, 0.3);
+        &::after {
+            opacity: 0.3;
+        }
+    }
+    
+    
+}
+
+.kinds-of-work__toys {
+    background-color: #56c3b2;
+    height: 48px;
+    padding: 28px 30px;
+    display: block;
+    &:hover,
+    &:focus {
+        position: relative;
+        top: -5px;
+        background-color: #46c1ae;
+        box-shadow: 0 5px 0 0 #46c1ae;
+        outline: none;
+    }
+    
+    &:hover > b::after,
+    &:focus > b::after {
+        opacity: 0.7;
+    }
+    &:active > b {
+        color: rgba(255, 255, 255, 0.3);
+        &::after {
+            opacity: 0.3;
+        }
+    }
+}
+
+
+@media (min-width: $tablet-width) {
+    .kinds-of-work {
+        padding-top: 160px;
+        background-image: url("../img/bg-kind-of-works.jpg");
+        background-position: center 0;
+        position: relative;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100vw;
+            height: 22px;
+            background-image: url("../svg/zigzag.svg");
+            background-repeat: repeat-x;
+            background-position: center 0;
+            z-index: 5;
+            background-size: 750px;
+  
+        }
+    }
+    
+   
+    .kinds-of-work__slogan {
+        font-size: 43px;
+        line-height: 50px;
+        margin-bottom: 372px;
+    }
+    .kinds-of-work__link-container {
+        width: 100%;
+        display: flex;
+        width: 668px;
+    }
+    .kinds-of-work__interior-name,
+    .kinds-of-work__toys-name {
+        font-size: 20px;
+        line-height: 30px;
+        
+    }
+    .kinds-of-work__interior,
+    .kinds-of-work__toys {
+        height: 60px;
+        width: 50%;
+        padding-left: 35px;
+        padding-right: 0;
+    }
+    .kinds-of-work__interior-name::after {
+        right: 36px;
+    }
+    .kinds-of-work__toys-name::after {
+        right: 33px;
+    }
+}
+@media (min-width: $desktop-width) {
+    .kinds-of-work {
+        &::before {
+            bottom: -15px;
+            height: 34px;
+            background-size: auto;
+           
+        }
+    }
+   
+    .kinds-of-work__slogan {
+        font-size: 53px;
+        line-height: 57px;
+        margin-bottom: 355px;
+    }
+    .kinds-of-work__link-container {
+        width: 1050px;
+    }
+}
